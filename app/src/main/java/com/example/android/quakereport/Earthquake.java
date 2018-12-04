@@ -6,33 +6,33 @@ package com.example.android.quakereport;
 public class Earthquake {
 
     // Magnitude of the earthquake
-    private String mMagnitude;
+    private double mMagnitude;
 
     // Location of the earthquake
     private String mLocation;
 
     // Date of the earthquake
-    private String mDate;
+    private long mTimeInMilliseconds;
 
     /**
      * Create a new Word object.
      *
      * @param magnitude is the magnitude (size) of the earthquake
      * @param location  is the city location of the earthquake
-     * @param date      is the date the earthquake happened
+     * @param timeInMilliseconds      is unix time of the earthquake
      */
 
-    public Earthquake(String magnitude, String location, String date) {
+    public Earthquake(double magnitude, String location, long timeInMilliseconds) {
         this.mMagnitude = magnitude;
         this.mLocation = location;
-        this.mDate = date;
+        this.mTimeInMilliseconds = timeInMilliseconds;
     }
 
 
     /*
      * Returns the magnitude of the earthquake
      * */
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
@@ -44,10 +44,10 @@ public class Earthquake {
     }
 
     /*
-     * Returns the date of the earthquake
+     * Returns the TimeInMilliseconds of the earthquake
      * */
-    public String getDate() {
-        return mDate;
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }
 
